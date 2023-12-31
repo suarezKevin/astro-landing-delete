@@ -1,0 +1,23 @@
+---
+interface Props{
+    title?: string;
+}
+import Footer from '../components/Footer.astro'
+import '../styles/layout.css'
+
+const {title} = Astro.props
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro | {title}</title>
+</head>
+<body>
+    <main class="mx-auto container md:pt-10">
+        <slot/>
+    </main>
+</body>
+<Footer/>
+</html>
